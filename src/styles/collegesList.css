@@ -1,0 +1,12 @@
+/* College Feed styles */
+.collegeFeedRow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.collegeFeedView {
+    display: flex;
+    justify-content: center;
+}
