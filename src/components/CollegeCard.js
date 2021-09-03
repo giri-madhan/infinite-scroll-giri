@@ -1,10 +1,11 @@
 import '../styles/collegeCard.css';
 import Assets from '../utils/Assets';
+import capitilizeFirstLetter from '../utils/functions';
 
 const TagButton = ({ tagName }) => {
     return(
-        <div className="whiteButton">
-            <span>{tagName}</span>
+        <div className="whiteButton fw300">
+            <span>{capitilizeFirstLetter(tagName)}</span>
         </div>
     );
 }
@@ -38,11 +39,10 @@ const Offer = () => {
 
 
 const CollegeCard = ({ college }) => {
-    console.log(college)
     return (
         <div className='cardContainer'>
             <div className="topContainer">
-                <img className="collegeImage" src={Assets.college_01} alt='college_01' />
+                <img className="collegeImage" src={Assets.college_02} alt='college_01' />
                 {college.promoted && 
                     <div className="promotedBackground">
                         <span className="white fw700">PROMOTED</span>
@@ -53,13 +53,13 @@ const CollegeCard = ({ college }) => {
                     <Tags tags={ college.tags }/>
                 </div>
                 <div className="rankingContainer white fw500">
-                    {college.ranking}
+                    #{college.ranking}
                 </div>
             </div>
             <div className="bottomContainer">
                 <div className="bottomLeftContainer">
                     <div className="collegeNameAndRating grey fw700">{college.college_name} ★★★★☆</div>
-                    <div className="collegeAddress grey fw600">{college.nearest_place[0]} | <span className="distanceFrom">{college.famous_nearest_places}</span></div>
+                    <div className="collegeAddress grey fw600">{college.nearest_place[0]} | <span className="distanceFrom">{college.nearest_place[1]}</span></div>
                     <div className="collegeMatch"><span className="matchNumber green fw800">93% Match: </span><span className="kilometers-text grey fw800">2.5kms </span><span>from GTB Nagar, 7 Kms from Rajiv Chowk</span></div>
                     <Offer />
                 </div>

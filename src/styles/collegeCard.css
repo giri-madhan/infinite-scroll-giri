@@ -1,6 +1,8 @@
 .cardContainer {
-    border: 1px solid black;
+    border: 1px solid lightgray;
     margin: 20px;
+    box-shadow: 2px 2px #f9f6f6;
+    border-radius: 5px;
 }
 
 /* top container styles */
@@ -36,6 +38,7 @@
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 30px;
+    font-size: 13px;
 }
 .ratingContainer {
     background-color: #F5A626;
@@ -57,7 +60,7 @@
 
 .collegeImage { 
     opacity:1;
-    filter: brightness(50%);
+    filter: brightness(30%);
     background: #C33764;  /* fallback colour. Make sure this is just one solid colour. */
     background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/2rlzaXi");
     background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/2rlzaXi"); /* The least supported option. */
@@ -155,9 +158,6 @@
 .grey {
     color: #444444;
 }
-.light-grey {
-    color: #444444;
-}
 .green {
     color: #32ac92;
 }
@@ -166,15 +166,6 @@
 }
 .red {
     color: #DD1B26;
-}
-.dark-red {
-
-}
-.yellow {
-
-}
-.purple {
-
 }
 .blue {
     color: #40A2D4;
